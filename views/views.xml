@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+     <record id="inherited_message_form" model="ir.ui.view">
+        <field name="name">post.message</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+          <header>
+              <field name="activate_message" invisible="1"/>
+              <button name="post_message" string="LISTO" type="object" attrs="{'invisible': [('activate_message', '=', True)]}"/>
+          </header>
+        </field>
+    </record>
+  </data>
+</odoo>
